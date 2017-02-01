@@ -1,9 +1,6 @@
 class TicTacToe {
     constructor() {
-    	this.matrix = [[null,null,null],
-					   [null,null,null],
-					   [null,null,null]
-					  ];
+    	this.matrix = [[null,null,null],[null,null,null],[null,null,null]];
 		this.freeFields = 9;
     }
 
