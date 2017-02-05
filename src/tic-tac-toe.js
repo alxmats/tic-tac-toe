@@ -37,8 +37,13 @@ class TicTacToe {
     			(this.matrix[0][0] == value && this.matrix[0][0] == this.matrix[1][1] && this.matrix[1][1] == this.matrix[2][2]) ||
     			(this.matrix[0][2] == value && this.matrix[0][2] == this.matrix[1][1] && this.matrix[1][1] == this.matrix[2][0]))  {
     			return value
-    		} else return null
+    		}
+
+            return null
     	}
+
+        // no more than 4 freeFields should be empty to check winner
+        if (this.freeFields > 5) return null;
 
     	return checkFields.call(this, 'x') || checkFields.call(this, 'o');
     	
